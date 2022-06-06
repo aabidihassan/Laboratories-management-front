@@ -28,6 +28,7 @@ export class SidebarComponent implements OnInit {
     ngOnInit() {
         this.profile.profile().subscribe(data=>{
           this.user = data;
+          localStorage.setItem("user", JSON.stringify(this.user))
         },err=>{
           alert(err);
         })
