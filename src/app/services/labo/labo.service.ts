@@ -14,4 +14,8 @@ export class LaboService {
   public newlabo(user : User):Observable<any>{
     return this.httpClient.post(environment.apiUrl+"labos/newlabo", user)
   }
+
+  public listlabos():Observable<any>{
+    return this.httpClient.get(environment.apiUrl+"labos/usersByRole?role=RESPO");
+  }
 }

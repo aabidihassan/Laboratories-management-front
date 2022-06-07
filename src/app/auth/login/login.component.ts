@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     if (localStorage.getItem("token")!=null){
-      this.router.navigate(['/dashboard'])
+      this.router.navigate(['/user'])
     }
   }
 
@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     this.auth.authenticate(this.user).subscribe(data=>{
       this.token = data;
       localStorage.setItem("token", JSON.stringify(this.token));
-      this.router.navigate(['/dashboard'])
+      this.router.navigate(['/user'])
     },err=>{
       alert("Informations incorrects")
     })

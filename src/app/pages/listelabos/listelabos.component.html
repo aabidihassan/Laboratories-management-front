@@ -1,0 +1,60 @@
+<div class="row">
+<div class="col-md-12">
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title"> Simple Table</h4>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thead class=" text-primary">
+            <th colspan="3">
+              Laboratoire
+            </th>
+
+            <th colspan="4">
+              Responsable
+            </th>
+
+          </thead>
+          <thead class=" text-primary">
+            <th>
+              Nom
+            </th>
+            <th>
+              Adresse
+            </th>
+            <th>
+              Telephone
+            </th>
+            <th>
+              Nom d'utilisateur
+            </th>
+            <th>
+              Adresse
+            </th>
+            <th>
+              Telephone
+            </th>
+            <th>
+              E-Mail
+            </th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let l of labos">
+              <td>{{l.nom}}</td>
+              <td>{{l.adresse}}</td>
+              <td>{{l.telephone}}</td>
+              <td>{{l.membres[0].username}}</td>
+              <td>{{l.membres[0].adresse}}</td>
+              <td>{{l.membres[0].telephone}}</td>
+              <td>{{l.membres[0].email}}</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

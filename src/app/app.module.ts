@@ -18,6 +18,7 @@ import { FormsModule } from "@angular/forms";
 import { AuthInterceptor } from "./interceptors/auth.interceptor";
 import { LogoutComponent } from './auth/logout/logout.component';
 import { NewlaboComponent } from './pages/newlabo/newlabo.component';
+import { ListelabosComponent } from './Pages/listelabos/listelabos.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { NewlaboComponent } from './pages/newlabo/newlabo.component';
     LoginComponent,
     LogoutComponent,
     NewlaboComponent,
+    ListelabosComponent,
   ],
   imports: [
     BrowserAnimationsModule,

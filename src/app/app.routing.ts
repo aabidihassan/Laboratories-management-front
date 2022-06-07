@@ -5,6 +5,7 @@ import { LogoutComponent } from './auth/logout/logout.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { IconsComponent } from './pages/icons/icons.component';
+import { ListelabosComponent } from './Pages/listelabos/listelabos.component';
 import { MapsComponent } from './pages/maps/maps.component';
 import { NewlaboComponent } from './pages/newlabo/newlabo.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
@@ -28,7 +29,8 @@ export const AppRoutes: Routes = [
         { path: 'maps',           component: MapsComponent },
         { path: 'notifications',  component: NotificationsComponent },
         { path: 'upgrade',        component: UpgradeComponent },
-        { path: 'newlabo',        component: NewlaboComponent }
+        { path: 'newlabo',        component: NewlaboComponent },
+        { path: 'listelabos',        component: ListelabosComponent }
       ]
   },
   { path: 'logout', component: LogoutComponent}
