@@ -1,0 +1,45 @@
+<div class="col">
+  <div class="card card-chart" style="padding: 3%;">
+<form (ngSubmit)="submit()">
+  <h5>Informations sur laboratoire</h5>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Nom de laboratoire</label>
+    <input type="text" class="form-control" placeholder="Nom de laboratoire" [(ngModel)]="labo.nom">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Adresse de laboratoire</label>
+    <input type="text" class="form-control" placeholder="Adresse de laboratoire" [(ngModel)]="labo.adresse">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Telephone de laboratoire</label>
+    <input type="tel" class="form-control" placeholder="Telephone de laboratoire" [(ngModel)]="labo.telephone">
+  </div>
+
+  <hr style="margin-top: 2%;">
+
+  <h5>Informations sur responsable</h5>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Username de responsable</label>
+    <input type="text" class="form-control" placeholder="Username de responsable" [(ngModel)]="user.username">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Adresse de responsable</label>
+    <input type="text" class="form-control" placeholder="Adresse de responsable" [(ngModel)]="user.adresse">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Telephone de responsable</label>
+    <input type="tel" class="form-control" placeholder="Telephone de responsable" [(ngModel)]="user.telephone">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Email de responsable</label>
+    <input type="email" class="form-control" placeholder="Email de responsable" [(ngModel)]="user.email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Mot de passe de responsable</label>
+    <input type="password" class="form-control" placeholder="Mot de passe de responsable" [(ngModel)]="user.password">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Ajouter</button>
+</form>
+</div>
+</div>

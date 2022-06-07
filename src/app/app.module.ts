@@ -16,6 +16,8 @@ import { LoginComponent } from './auth/login/login.component';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { FormsModule } from "@angular/forms";
 import { AuthInterceptor } from "./interceptors/auth.interceptor";
+import { LogoutComponent } from './auth/logout/logout.component';
+import { NewlaboComponent } from './pages/newlabo/newlabo.component';
 
 
 @NgModule({
@@ -23,6 +25,8 @@ import { AuthInterceptor } from "./interceptors/auth.interceptor";
     AppComponent,
     AdminLayoutComponent,
     LoginComponent,
+    LogoutComponent,
+    NewlaboComponent,
   ],
   imports: [
     BrowserAnimationsModule,

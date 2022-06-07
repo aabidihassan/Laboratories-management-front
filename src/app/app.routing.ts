@@ -1,10 +1,12 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
+import { LogoutComponent } from './auth/logout/logout.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { IconsComponent } from './pages/icons/icons.component';
 import { MapsComponent } from './pages/maps/maps.component';
+import { NewlaboComponent } from './pages/newlabo/newlabo.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
 import { TableComponent } from './pages/table/table.component';
 import { TypographyComponent } from './pages/typography/typography.component';
@@ -25,9 +27,11 @@ export const AppRoutes: Routes = [
         { path: 'icons',          component: IconsComponent },
         { path: 'maps',           component: MapsComponent },
         { path: 'notifications',  component: NotificationsComponent },
-        { path: 'upgrade',        component: UpgradeComponent }
+        { path: 'upgrade',        component: UpgradeComponent },
+        { path: 'newlabo',        component: NewlaboComponent }
       ]
   },
+  { path: 'logout', component: LogoutComponent}
   /*** its need to be always in the last A Mon cheff hassane */
   // { path: '**',component   : WrongRouteComponent},
 
