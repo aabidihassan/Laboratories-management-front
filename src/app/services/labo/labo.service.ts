@@ -18,4 +18,12 @@ export class LaboService {
   public listlabos():Observable<any>{
     return this.httpClient.get(environment.apiUrl+"labos/usersByRole?role=RESPO");
   }
+
+  public listlabomembres(username : String):Observable<any>{
+    return this.httpClient.get(environment.apiUrl+"users/userswithsamelabo/"+username);
+  }
+
+  public getlabo(username : String):Observable<any>{
+    return this.httpClient.get(environment.apiUrl+"labos/"+username);
+  }
 }

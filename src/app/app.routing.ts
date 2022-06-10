@@ -3,6 +3,9 @@ import { LoginComponent } from './auth/login/login.component';
 import { LogoutComponent } from './auth/logout/logout.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { DivisionComponent } from './pages/budgets/division/division.component';
+import { ListComponent } from './pages/budgets/list/list.component';
+import { NewComponent } from './pages/budgets/new/new.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { IconsComponent } from './pages/icons/icons.component';
 import { ListelabosComponent } from './Pages/listelabos/listelabos.component';
@@ -30,7 +33,13 @@ export const AppRoutes: Routes = [
         { path: 'notifications',  component: NotificationsComponent },
         { path: 'upgrade',        component: UpgradeComponent },
         { path: 'newlabo',        component: NewlaboComponent },
-        { path: 'listelabos',        component: ListelabosComponent }
+        { path: 'listelabos',        component: ListelabosComponent },
+        { path: 'budgets', children:[
+          { path: '',        component: ListComponent },
+          { path: 'newbudget',        component: NewComponent },
+          { path: 'division',        component: DivisionComponent },
+        ] },
+
       ]
   },
   { path: 'logout', component: LogoutComponent}

@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-md-12">
+  <div class="card">
+    <div class="card-header">
+      <h6> Annee: {{annee}} || Budget: {{budget}}</h6>
+    </div>
+    <div class="card-header">
+      <h6> Somme reste a devise: {{budget - max - input}}</h6>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thead class=" text-primary">
+            <th>
+              Username
+            </th>
+            <th>
+              Annee
+            </th>
+            <th>
+              Part
+            </th>
+            <th style="text-align: center;">
+              Action
+            </th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let u of membres">
+              <td>{{u.username}}</td>
+              <td>{{annee}}</td>
+              <td>
+                <input class="form-control inpt" *ngIf="u.budgetPersonnels[0]!=null" type="number" value="{{u.budgetPersonnels[0].montant}}" max="{{u.budgetPersonnels[0].montant + max}}">
+                <input class="form-control inpt" *ngIf="u.budgetPersonnels[0]==null" type="number" max="{{max}}">
+              </td>
+              <td style="text-align: center;">
+                <button class="btn btn-danger">
+                  <i class="nc-icon nc-check-2"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>

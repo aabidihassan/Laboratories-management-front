@@ -1,3 +1,4 @@
+import { BudgetPersonnel } from "../budgetpersonnel/budget-personnel";
 import { Labo } from "../labo/labo";
 
 export class User {
@@ -9,4 +10,5 @@ export class User {
   public telephone !: String;
   public roles !: any;
   public labo !: Labo;
+  public budgetPersonnels : Array<BudgetPersonnel>
 }

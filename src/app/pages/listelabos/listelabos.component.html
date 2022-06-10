@@ -1,8 +1,11 @@
 <div class="row">
-<div class="col-md-12">
-  <div class="card">
+  <div class="col-md-12">
+  <div class="card" *ngIf="user.roles[0].libelle == 'ADMIN'">
     <div class="card-header">
-      <h4 class="card-title"> Simple Table</h4>
+      <h4 class="card-title"> Liste des laboratoire et leurs responsable</h4>
+    </div>
+    <div class="card-header">
+      <button routerLink="/newlabo" class="btn btn-primary">Nouveau Laboratoire</button>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -56,5 +59,44 @@
       </div>
     </div>
   </div>
-</div>
+
+
+  <div class="card" *ngIf="user.roles[0].libelle == 'RESPO'">
+    <div class="card-header">
+      <h4 class="card-title"> Liste des employes</h4>
+    </div>
+    <div class="card-header">
+      <button routerLink="/newlabo" class="btn btn-primary">Nouveau employe</button>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thead class=" text-primary">
+            <th>
+              Nom d'utilisateur
+            </th>
+            <th>
+              Adresse
+            </th>
+            <th>
+              Telephone
+            </th>
+            <th>
+              E-Mail
+            </th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let m of membres">
+              <td>{{m.username}}</td>
+              <td>{{m.adresse}}</td>
+              <td>{{m.telephone}}</td>
+              <td>{{m.email}}</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  </div>
 </div>

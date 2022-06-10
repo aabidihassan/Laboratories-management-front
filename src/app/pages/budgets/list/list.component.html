@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-md-12">
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title"> Liste des budgets</h4>
+    </div>
+    <div class="card-header">
+      <button routerLink="/budgets/newbudget" class="btn btn-primary">Nouveau Budget</button>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thead class=" text-primary">
+            <th>
+              Annee
+            </th>
+            <th>
+              Budget de base
+            </th>
+            <th>
+              Budget de recherche
+            </th>
+            <th>
+              Budget total
+            </th>
+            <th style="text-align: center;">
+              Affectation
+            </th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let b of list">
+              <td>{{b.annee.year}}</td>
+              <td>{{b.db}}</td>
+              <td>{{b.dr}}</td>
+              <td>{{b.dr + b.db}}</td>
+              <td style="text-align: center;">
+                <button class="btn btn-danger" (click)="diviser(b.id_budget, b.annee.year, b.dr)">
+                  <i class="nc-icon nc-settings"></i>
+                </button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>

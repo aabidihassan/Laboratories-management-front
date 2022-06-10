@@ -19,6 +19,9 @@ import { AuthInterceptor } from "./interceptors/auth.interceptor";
 import { LogoutComponent } from './auth/logout/logout.component';
 import { NewlaboComponent } from './pages/newlabo/newlabo.component';
 import { ListelabosComponent } from './Pages/listelabos/listelabos.component';
+import { ListComponent } from './pages/budgets/list/list.component';
+import { NewComponent } from './pages/budgets/new/new.component';
+import { DivisionComponent } from './pages/budgets/division/division.component';
 
 
 @NgModule({
@@ -29,6 +32,9 @@ import { ListelabosComponent } from './Pages/listelabos/listelabos.component';
     LogoutComponent,
     NewlaboComponent,
     ListelabosComponent,
+    ListComponent,
+    NewComponent,
+    DivisionComponent
   ],
   imports: [
     BrowserAnimationsModule,
