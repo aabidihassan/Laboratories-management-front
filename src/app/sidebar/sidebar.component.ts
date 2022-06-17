@@ -32,21 +32,16 @@ export class SidebarComponent implements OnInit {
             case "ADMIN":
               this.menuItems = [
                 { path: '/user',          title: 'Profile',      icon:'nc-single-02',  class: '' },
-                { path: '/newlabo',         title: 'Neuveau Laboratoire',             icon:'nc-simple-add',    class: '' },
-                { path: '/listelabos',         title: 'Liste des Laboratoires',             icon:'nc-bullet-list-67',    class: '' },
+                { path: '/labos',         title: 'Laboratoires',             icon:'nc-bullet-list-67',    class: '' },
                 { path: '/logout',       title: 'Deconnexion',    icon:'nc-user-run',  class: 'active-pro' },
               ];
               break;
 
             case "USER":
               this.menuItems = [
-                { path: '/icons',         title: 'Icons',             icon:'nc-diamond',    class: '' },
+                { path: '/user',          title: 'Profile',      icon:'nc-single-02',  class: '' },
                 { path: '/dashboard',     title: 'Dashboard',         icon:'nc-bank',       class: '' },
-                { path: '/maps',          title: 'Maps',              icon:'nc-pin-3',      class: '' },
-                { path: '/notifications', title: 'Notifications',     icon:'nc-bell-55',    class: '' },
-                { path: '/user',          title: 'User Profile',      icon:'nc-single-02',  class: '' },
-                { path: '/table',         title: 'Table List',        icon:'nc-tile-56',    class: '' },
-                { path: '/typography',    title: 'Typography',        icon:'nc-caps-small', class: '' },
+                { path: '/budgetspersonnel',          title: 'Budgets Personnel',              icon:'nc-cart-simple',      class: '' },
                 { path: '/logout',       title: 'Deconnexion',    icon:'nc-user-run',  class: 'active-pro' },
               ];
               break;
@@ -55,10 +50,9 @@ export class SidebarComponent implements OnInit {
               this.menuItems = [
                 { path: '/user',          title: 'Profile',      icon:'nc-single-02',  class: '' },
                 { path: '/dashboard',     title: 'Dashboard',         icon:'nc-bank',       class: '' },
-                { path: '/listelabos',         title: 'Les employes',             icon:'nc-badge',    class: '' },
+                { path: '/labos',         title: 'Les employes',             icon:'nc-badge',    class: '' },
                 { path: '/budgets/',         title: 'Les budgets',             icon:'nc-money-coins',    class: '' },
-                { path: '/icons',         title: 'Icons',             icon:'nc-diamond',    class: '' },
-                { path: '/typography',    title: 'Typography',        icon:'nc-caps-small', class: '' },
+                { path: '/budgetspersonnel',          title: 'Budgets Personnel',              icon:'nc-cart-simple',      class: '' },
                 { path: '/logout',       title: 'Deconnexion',    icon:'nc-user-run',  class: 'active-pro' },
               ];
               break;

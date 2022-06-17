@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-md-12">
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title"> Vos Budgets Personnel</h4>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thead class=" text-primary">
+            <th>
+              Annee
+            </th>
+            <th>
+              Montant
+            </th>
+            <th colspan="2" style="text-align: center;">
+              Besoins
+            </th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let b of bp">
+              <td>{{b[1].annee.year}}</td>
+              <td>{{b[0].montant}}</td>
+              <td style="text-align: center;">
+                <button (click)="lister(b[0].id_budget_personnel)" class="btn btn-danger">
+                  <i class="nc-icon nc-tap-01"></i>
+                </button>
+              </td>
+              <td style="text-align: center;">
+                <button (click)="new(b[0].id_budget_personnel, b[0].montant)" class="btn btn-danger">
+                  <i class="nc-icon nc-simple-add"></i>
+                </button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>

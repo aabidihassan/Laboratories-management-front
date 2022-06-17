@@ -1,11 +1,13 @@
 <div class="row">
   <div class="col-md-12">
   <div class="card">
+    <a routerLink="/budgets" class="btn btn-primary" style="width: 10%; margin-left: 1.5%;">
+      <i class="nc-icon nc-minimal-left">Back</i></a>
     <div class="card-header">
-      <h6> Annee: {{annee}} || Budget: {{budget}}</h6>
+      <h6> Annee: {{budget.annee.year}} || Budget de Recherche: {{budget.dr}}</h6>
     </div>
     <div class="card-header">
-      <h6> Somme reste a devise: {{budget - max - input}}</h6>
+      <h6> Somme reste a devise: {{budget.dr - max }}</h6>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -18,22 +20,21 @@
               Annee
             </th>
             <th>
-              Part
+              Budget Personnel
             </th>
             <th style="text-align: center;">
-              Action
+              Affecter
             </th>
           </thead>
           <tbody>
             <tr *ngFor="let u of membres">
               <td>{{u.username}}</td>
-              <td>{{annee}}</td>
+              <td>{{budget.annee.year}}</td>
               <td>
-                <input class="form-control inpt" *ngIf="u.budgetPersonnels[0]!=null" type="number" value="{{u.budgetPersonnels[0].montant}}" max="{{u.budgetPersonnels[0].montant + max}}">
-                <input class="form-control inpt" *ngIf="u.budgetPersonnels[0]==null" type="number" max="{{max}}">
+                <input type="number" #montant value="{{u.budgetPersonnels[0]?.montant}}">
               </td>
               <td style="text-align: center;">
-                <button class="btn btn-danger">
+                <button class="btn btn-danger" (click)="affect(u.budgetPersonnels[0]?.id_budget_personnel, u, montant.value)">
                   <i class="nc-icon nc-check-2"></i>
                 </button>
               </td>

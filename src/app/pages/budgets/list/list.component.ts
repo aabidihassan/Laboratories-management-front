@@ -35,9 +35,9 @@ export class ListComponent implements OnInit {
 
   }
 
-  diviser(id : number, year : number, br : number){
+  diviser(budget : Budget){
 
-    this.router.navigate(['/budgets/division'], { state: { identifiant: id ,  annee : year , budget : br} });
+    this.router.navigate(['/budgets/division'], { state: { budget : budget } });
 
   }
 

@@ -22,6 +22,12 @@ import { ListelabosComponent } from './Pages/listelabos/listelabos.component';
 import { ListComponent } from './pages/budgets/list/list.component';
 import { NewComponent } from './pages/budgets/new/new.component';
 import { DivisionComponent } from './pages/budgets/division/division.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ModalComponent } from './pages/budgets/division/modal/modal.component';
+import { ListBesoinsComponent } from './pages/besoins/list-besoins/list-besoins.component';
+import { NewBesoinComponent } from './pages/besoins/new-besoin/new-besoin.component';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { ListeBesoinsComponent } from './pages/besoins/liste-besoins/liste-besoins.component';
 
 
 @NgModule({
@@ -34,7 +40,12 @@ import { DivisionComponent } from './pages/budgets/division/division.component';
     ListelabosComponent,
     ListComponent,
     NewComponent,
-    DivisionComponent
+    DivisionComponent,
+    ModalComponent,
+    ListBesoinsComponent,
+    NewBesoinComponent,
+    NotfoundComponent,
+    ListeBesoinsComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -47,7 +58,8 @@ import { DivisionComponent } from './pages/budgets/division/division.component';
     FooterModule,
     FixedPluginModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [
     {
