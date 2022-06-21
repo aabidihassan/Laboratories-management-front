@@ -27,7 +27,7 @@ export class NewlaboComponent implements OnInit {
   submit(){
     this.user.labo = this.labo;
     this.laboService.newlabo(this.user).subscribe(data=>{
-      this.router.navigate(['/listelabos']);
+      this.router.navigate(['/labos']);
     },err=>{
       console.log(err)
     })
@@ -35,7 +35,7 @@ export class NewlaboComponent implements OnInit {
 
   create(){
     this.accountService.newuser(this.authenticate.username, this.user).subscribe(data=>{
-      this.router.navigate(['/listelabos']);
+      this.router.navigate(['/labos']);
     },err=>{
       console.log(err)
     })
